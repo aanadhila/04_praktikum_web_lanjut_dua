@@ -10,12 +10,14 @@ class PegawaiController extends Controller
 {
      public function index()
     {
-    	// mengambil data pegawai yang memiliki id 1
-        $pegawai = Pegawai::where('id', 1)->get(); 
+        // mengambil data pegawai
+    	$pegawai = Pegawai::all();
     
         // mengirim data pegawai ke view pegawai 
         return view('pegawai', ['pegawai' => $pegawai]); 
 
+        // // mengambil data pegawai yang memiliki id 1
+        // $pegawai = Pegawai::where('id', 1)->get(); 
         // mengambil data pegawai yang id nya lebih besar dari 10
         // $pegawai = Pegawai::where('id', '>' , 10)->get();
         // // mengambil data pegawai yang id nya lebih besar sama dengan 10 
